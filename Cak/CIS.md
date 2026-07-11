@@ -8,11 +8,16 @@
 
 
 
-## pattern
+## pattern configure file system kernel module
 
 ## object
 
-## pattern
+## pattern file system partition
 
 ## object
 
+## pattern package management
+> regulaly update arch linux
+```
+pacman -Syu
+```
