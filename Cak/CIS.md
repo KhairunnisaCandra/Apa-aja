@@ -30,9 +30,13 @@ install [nama_module] /bin/false
 ## object
 | no  | mount path | mount option | 
 | ---------|-----------|----------|
-| 1     |   /var    | nodev,nosuid |
-| 2     |   /home       |  nodev,nosuid
+| 1     |   /var     | nodev,nosuid |
+| 2     |   /home    |  nodev,nosuid
 | 3     |   /tmp     | nodev,nosuid,noexec |
+| 4     |   /dev/shm | nodev,nosuid,noexec |
+| 5     | /var/tmp   | nodev,nosuid,noexec |
+| 6     | /var/log   | nodev,nosuid,noexec |
+| 7     | /var/log/audit | nodev,nosuid,noexec |
 
 ## pattern package management
 > regulaly update arch linux
