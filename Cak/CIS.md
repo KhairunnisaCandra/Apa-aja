@@ -1,8 +1,8 @@
 # CIS
 
 ## 1. Initial setup
-
-### pattern (configure file system kernel module)
+## 1.1.1 configure file system kernel module
+### pattern 
 ```
 blacklist [nama_module]
 install [nama_module] /bin/false
@@ -22,12 +22,17 @@ install [nama_module] /bin/false
 | 9     | firewire-core |
 | 10    | usb storage |
 
-
-## pattern (file system partition)
+## 1.1.2 file system partition
+## pattern 
 ```
 [device] [mount_target] [mount_option] 0 0
 ```
 ## object
+| no  | mount path | mount option | 
+| ---------|-----------|----------|
+| 1     |   /var    | nodev,nosuid |
+| 2     |   /home       |  nodev,nosuid
+| 3     |   /tmp     | nodev,nosuid,noexec |
 
 ## pattern package management
 > regulaly update arch linux
