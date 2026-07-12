@@ -103,4 +103,51 @@ install [nama_module] /bin/false
 | name  | path | value |
 | ------|------|-------|
 | net.ipv4.ip_forward | /etc/sysctl.d/ipv4.ip_forward.conf  | net.ipv4.ip_forward = 0 |
-| net.ipv4.conf.all.forwarding | /etc/sysctl.d/ | net.ipv4.conf.all.forwarding = 0 | 
+| net.ipv4.conf.all.forwarding | /etc/sysctl.d/ipv4.conf.all.forwarding.conf | net.ipv4.conf.all.forwarding = 0 | 
+| net.ipv4.conf.default.forwarding | /etc/sysctl.d/ | net.ipv4.conf.default.forwarding = 0 |
+| net.ipv4.conf.all.accept_redirect | /etc/sysctl.d/ | net.ipv4.conf.all.accept_redirect = 0 |
+
+## 3.3.2 ipv6
+| name  | path | value |
+| ------|------|-------|
+
+# 4. Firewall
+```
+pacman -S firewalld
+```
+```
+pacman -S nftables
+```
+
+```
+systemctl enable firewalld
+```
+# 5. Acecss
+| access  | alphabet | numerik |
+| ------|------|-------|
+| read | r | 4 |
+| write | w | 2 |
+| execution | x | 1 |
+> contohnyaa
+>- chmod 0600 /etc/ssh/sshd_config
+>- agoy.txt
+>- chmod 2 agoy.txt
+>- pemilik file = write and read
+>- group 4 = write
+>- other = write
+
+
+## pattern
+```
+chown [user]:[group] [file_path]
+chmod [modoption] [file_path]
+```
+## object 
+| user  | group | modoption | file path |
+| ------|------|-------|----|
+| root | root | 0600 | /etc/ssh/sshd_config |
+| root | root | 0640 | /etc/ssh/sshd_config |
+| root | root | 0644 | /etc/ssh/sshd_config | 
+
+
+# 6. Logging and Auditing
