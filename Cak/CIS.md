@@ -41,8 +41,14 @@ install [nama_module] /bin/false
  jadinya itu /home dan /var -> nodev,nosuid
  /tmp /dev/shm /var/tmp /var/log /var/log/audit -> nodev,nosuid,noexec
 ```
-## pattern package management
+## 1.2 pattern package management
 > regulaly update arch linux
 ```
 pacman -Syu
 ```
+## 1.5 additional hardening 
+| nama  | path | value |
+| ------|------|-------|
+| core  | /etc/security/limits.d/60-limits.conf | * hard core 0 |
+| fs.protected_hardlinks | /etc/sysctl.d/fs-prottected.conf | fs.protected_hardlinks = 1 |
+| fs.protected_symlinks | /etc/sysctl.d/fs-symlink.conf | fs.protected_symlinks = 1 |
