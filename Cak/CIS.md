@@ -78,8 +78,29 @@ systemctl mask [nama_service]
 | 7 | kea-dhcp4.service |
 | 8 | kea-dhcp6.service |
 
-## configure client service
+## 2.2 configure client service
 ```
 pacman -Rs ftp ldap telnet tftp
 ```
 # 3. Network
+## 3.2 configur network kernel module 
+## patterrn
+```
+blacklist [nama_module]
+install [nama_module] /bin/false
+```
+## object
+| no  | object |
+| ----|--------|
+| 1| atm |
+| 2 | can |
+| 3 | dccp |
+|4 | tipc |
+| 5 | rds |
+| 6 | sctp |
+## 3.3 Network Kernel Parameters
+## 3.3.1 IPv4
+| name  | path | value |
+| ------|------|-------|
+| net.ipv4.ip_forward | /etc/sysctl.d/ipv4.ip_forward.conf  | net.ipv4.ip_forward = 0 |
+| net.ipv4.conf.all.forwarding | /etc/sysctl.d/ | net.ipv4.conf.all.forwarding = 0 | 
