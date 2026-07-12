@@ -1,6 +1,6 @@
 # CIS
 
-## 1. Initial setup
+# 1. Initial setup
 ## 1.1.1 configure file system kernel module
 ### pattern 
 ```
@@ -52,3 +52,34 @@ pacman -Syu
 | core  | /etc/security/limits.d/60-limits.conf | * hard core 0 |
 | fs.protected_hardlinks | /etc/sysctl.d/fs-prottected.conf | fs.protected_hardlinks = 1 |
 | fs.protected_symlinks | /etc/sysctl.d/fs-symlink.conf | fs.protected_symlinks = 1 |
+| fs.suid_dumpable | ... | ... |
+| kernel.dmesg_restrict | ... | ... |
+| kernel.kptr_restrict | ... | ... |
+| kernel.yama.ptrace_scope | .. | ... |
+| kernel.randomize_va_space | ... | ... |
+| systemd-coredump ProcessSizeMax | ... | ... |
+| systemd-coredump Storage | ... | ... |
+
+# 2. Services
+## pattern
+```
+systemctl stop [nama_service]
+systemctl mask [nama_service]
+```
+## object
+| no  | service |
+| ----|---------|
+| 1 | autofs.service |
+| 2 | avahi-daemon.socket |
+| 3 | avahi-daemon.service |
+| 4 | cockpit.socket |
+| 5 | cockpit.service |
+| 6 | kea-dhcp-ddns.service |
+| 7 | kea-dhcp4.service |
+| 8 | kea-dhcp6.service |
+
+## configure client service
+```
+pacman -Rs ftp ldap telnet tftp
+```
+# 3. Network
