@@ -52,8 +52,8 @@ pacman -Syu
 | core  | /etc/security/limits.d/60-limits.conf | * hard core 0 |
 | fs.protected_hardlinks | /etc/sysctl.d/fs-prottected.conf | fs.protected_hardlinks = 1 |
 | fs.protected_symlinks | /etc/sysctl.d/fs-symlink.conf | fs.protected_symlinks = 1 |
-| fs.suid_dumpable | ... | ... |
-| kernel.dmesg_restrict | ... | ... |
+| fs.suid_dumpable | /etc/sysctl.d/fs-dumpable.conf | fs.suid_dumpable = 0 |
+| kernel.dmesg_restrict | /etc/sysctl.d/fs-dmesg.conf | kernel.dmesg_restrict = 1 |
 | kernel.kptr_restrict | ... | ... |
 | kernel.yama.ptrace_scope | .. | ... |
 | kernel.randomize_va_space | ... | ... |
