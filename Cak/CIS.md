@@ -149,5 +149,21 @@ chmod [modoption] [file_path]
 | root | root | 0640 | /etc/ssh/sshd_config |
 | root | root | 0644 | /etc/ssh/sshd_config | 
 
+## patternn
+```
+xisudo -f [file path]
+# lalu tambahkan/hapus baris directive tertentu
+```
+## object
+| Directive/Target  | ket | file path |
+| ------|------|-------|
+| Defaults use_pty | ada | /etc/sudoers, /etc/sudoers.d/* |
+| Defaults logfile="/var/log/sudo.log" | ada (tambh)  | /etc/sudoers, /etc/sudoers.d/* |
+| (tag) NOPASSWD | tidak ada (hpus)  | /etc/sudoers, /etc/sudoers.d/* |
+| (directive) !authenticate | tidak ada (hapus) | /etc/sudoers, /etc/sudoers.d/* |
+| Defaults timestamp_timeout=<N> | N sesuai kebijakan (mis. ≤15) | /etc/sudoers, /etc/sudoers.d/* |
+
+
+
 
 # 6. Logging and Auditing
