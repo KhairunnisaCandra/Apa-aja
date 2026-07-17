@@ -110,6 +110,13 @@ install [nama_module] /bin/false
 ## 3.3.2 ipv6
 | name  | path | value |
 | ------|------|-------|
+| net.ipv6.ip_forward | /etc/sysctl.d/ipv6.ip_forward.conf  | net.ipv6.ip_forward = 0 |
+| net.ipv6.conf.all.forwarding | /etc/sysctl.d/ipv6.conf.all.forwarding.conf | net.ipv6.conf.all.forwarding = 0 | 
+| net.ipv6.conf.default.forwarding | /etc/sysctl.d/ipv6.conf.default.forwarding.conf | net.ipv6.conf.default.forwarding = 0 |
+| net.ipv6.conf.all.accept_redirect | /etc/sysctl.d/ipv6.conf.all.accept_redirect.conf | net.ipv6.conf.all.accept_redirect = 0 |
+| net.ipv6.conf.default.accept_redirect | /etc/sysctl.d/ipv6.conf.default.accept_redirects.conf | net.ipv6.conf.default.accept_redirect = 0 |
+| net.ipv6.conf.all.accept_source_route | /etc/sysctl.d/ipv6.conf.all.accept_source_route.conf | net.ipv6.conf.all.accept_source_route = 0 |
+| net.ipv6.conf.default.accept_source_route | /etc/sysctl.d/ipv6.conf.default.accept_source_route.conf | net.ipv6.conf.default.accept_source_route = 0 |
 
 # 4. Firewall
 ```
